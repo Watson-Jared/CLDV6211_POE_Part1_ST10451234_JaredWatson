@@ -1,60 +1,39 @@
 ﻿@model IEnumerable<EventEase.Models.Venue>
-
 @{
-    ViewData["Title"] = "Venue List";
+    ViewData["Title"] = "Venues";
 }
 
 <h1>Venues</h1>
+<p><a asp-action="Create">+ Add Venue</a></p>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.VenueID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.VenueName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Location)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Capacity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageUrl)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="table-wrapper">
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.VenueID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.VenueName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Location)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Capacity)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ImageUrl)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.VenueID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.VenueID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.VenueID">Delete</a>
-                </td>
+                <th>@Html.DisplayNameFor(model => model.VenueID)</th>
+                <th>@Html.DisplayNameFor(model => model.VenueName)</th>
+                <th>@Html.DisplayNameFor(model => model.Location)</th>
+                <th>@Html.DisplayNameFor(model => model.Capacity)</th>
+                <th>@Html.DisplayNameFor(model => model.ImageUrl)</th>
+                <th>Actions</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="color:#4d6490; font-family:'JetBrains Mono',monospace; font-size:0.8rem;">#@Html.DisplayFor(modelItem => item.VenueID)</td>
+                    <td><strong>@Html.DisplayFor(modelItem => item.VenueName)</strong></td>
+                    <td>@Html.DisplayFor(modelItem => item.Location)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Capacity)</td>
+                    <td style="max-width:160px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">@Html.DisplayFor(modelItem => item.ImageUrl)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.VenueID" class="action-edit">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.VenueID" class="action-details">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.VenueID" class="action-delete">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

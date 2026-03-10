@@ -1,5 +1,6 @@
 ﻿using EventEase.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -65,9 +66,11 @@ namespace EventEase.Controllers
         {
             if (id == null) return NotFound();
 
-            var booking = await _context.Venue.FindAsync(id);
+            var booking = await _context.Booking.FindAsync(id);
             if (booking == null) return NotFound();
 
+            ViewBag.EventID = new SelectList(_context.Event, "EventID", "EventName", booking.EventID);
+            ViewBag.VenueID = new SelectList(_context.Venue, "VenueID", "VenueName", booking.VenueID);
             return View(booking);
         }
 

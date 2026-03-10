@@ -1,97 +1,212 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
+<style>
+    .hero {
+        position: relative;
+        padding: 4.5rem 3.5rem;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 0.5rem 0 2.5rem;
+        border: 1px solid rgba(59,130,246,0.12);
+        background: radial-gradient(ellipse 70% 60% at 5% 50%, rgba(59,130,246,0.12)0.1) 0%, transparent 60%), radial-gradient(ellipse 50% 80% at 95% 20%, rgba(59,130,246,0.12)0.06) 0%, transparent 60%), linear-gradient(135deg, rgba(13,21,48,0.98) 0%, rgba(17,29,60,0.95) 100%);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(59,130,246,0.12);
+    }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventEase Management Company</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0000;
-            color: #333;
-            height: auto;
+    .hero-grid-lines {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(rgba(59,130,246,0.12)0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.12)0.04) 1px, transparent 1px);
+        background-size: 40px 40px;
+        pointer-events: none;
+    }
+
+    .hero-dot {
+        position: absolute;
+        width: 320px;
+        height: 320px;
+        top: -100px;
+        right: -80px;
+        background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(59,130,246,0.12)0.1);
+        border: 1px solid rgba(59,130,246,0.12)0.25);
+        color: #93c5fd;       
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.3rem 0.85rem;
+        border-radius: 99px;
+        margin-bottom: 1.5rem;
+    }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(59,130,246,0.12);
+            box-shadow: 0 0 6px rgba(59,130,246,0.12);
         }
 
-        .navbar {
-            background-color: #007FFF;
+    .hero h1 {
+        font-weight: 800;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        line-height: 1.05;
+        color: #fff;
+        margin-bottom: 1.1rem;
+        letter-spacing: -0.8px;
+    }
+
+        .hero h1::after {
+            display: none;
         }
 
-        .navbar-brand {
-            font-weight: bold;
-            color: white;
+        .hero h1 .em {
+            color: #3b82f6;
         }
 
-        .jumbotron {
-            background-image: url('https://source.unsplash.com/1600x900/?azure,cloud');
-            background-size: cover;
-            color: black;
+    .hero-sub {
+        font-size: 1rem;
+        color: #8fa3cc;
+        max-width: 460px;
+        line-height: 1.75;
+        margin-bottom: 2.25rem;
+        font-weight: 300;
+    }
+
+    .hero-actions {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .btn-hero {
+        padding: 0.7rem 1.6rem;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+    }
+
+    .btn-hero-em {
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        color: #ffffff;
+        box-shadow: 0 4px 16px rgba(59,130,246,0.4);
+    }
+
+        .btn-hero-em:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59,130,246,0.12)0.55);
+            color: #0a0f1e;
         }
 
-            .jumbotron h1 {
-                font-size: 3rem;
-                font-weight: bold;
-            }
+    .btn-hero-ghost {
+        background: rgba(255,255,255,0.04);
+        color: #c7d5f0;
+        border: 1px solid rgba(99,137,210,0.2);
+        backdrop-filter: blur(8px);
+    }
 
-
-            jumbotron p {
-                font-size: 1.5rem;
-            }
-
-        .btn-azure {
-            background-color: #007FFF;
-            color: white;
-            border: none;
+        .btn-hero-ghost:hover {
+            background: rgba(255,255,255,0.09);
+            color: #fff;
+            transform: translateY(-1px);
         }
 
+    .nav-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+    }
 
-        .features {
-            margin-top: 30px;
+    .nav-card {
+        background: rgba(13,21,48,0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(99,137,210,0.14);
+        border-radius: 14px;
+        padding: 1.6rem 1.5rem;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s ease;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+        display: block;
+    }
+
+        .nav-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(59,130,246,0.12)0.3);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.35), 0 0 20px rgba(59,130,246,0.12);
+            color: inherit;
         }
 
-        .feature {
-            text-align: center;
-        }
+    .card-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: rgba(59,130,246,0.12)0.1);
+        border: 1px solid rgba(59,130,246,0.12)0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
 
-            .feature img {
-                width: 100px;
-                height: 100px;
-            }
+    .nav-card h5 {
+        font-weight: 700;
+        font-size: 1rem;
+        color: #e8eeff;
+        margin-bottom: 0.35rem;
+    }
 
-        .btn-group{
-            margin-top: 20px;
-        }
+    .nav-card p {
+        font-size: 0.83rem;
+        color: #4d6490;
+        line-height: 1.6;
+        margin-bottom: 0.9rem;
+    }
 
-    </style>
-</head>
+    .card-cta {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: rgba(59,130,246,0.12);
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+</style>
 
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">Event Management</a>
-    </nav>
-    <div class="jumbotron text-center">
-        <div class="container">
-            <h1>Welcome to EventEase!</h1>
-            <p>Plan smart. Book fast. Celebrate with ease.</p>
-
-
-            <div class="btn-group" role="group">
-
-                <a href="/Venue" class="btn btn-azure btn-lg">Venues</a>
-                <a href="/Event" class="btn btn-azure btn-lg">Events</a>
-                <a href="/Booking" class="btn btn-azure btn-lg">Bookings</a>
-            </div>
+<div class="hero">
+    <div class="hero-grid-lines"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-content">
+        <div class="hero-eyebrow">Event Management Platform</div>
+        <h1>Plan smart.<br>Book <span class="em">fast.</span><br>Celebrate.</h1>
+        <p class="hero-sub">Streamline your entire event workflow — from venue discovery to booking confirmation — all in one place.</p>
+        <div class="hero-actions">
+            <a href="/Venue" class="btn-hero btn-hero-em">Browse Venues ↗</a>
+            <a href="/Event" class="btn-hero btn-hero-ghost">View Events</a>
+            <a href="/Booking" class="btn-hero btn-hero-ghost">My Bookings</a>
         </div>
     </div>
-
-
-
-</body>
-</html>
+</div>
 

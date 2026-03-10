@@ -40,10 +40,13 @@ button.accept-policy[b-h6jhhsk07a] {
   line-height: inherit;
 }
 
+a.navbar-brand[b-h6jhhsk07a] {
+    white-space: normal;
+    word-break: break-all;
+}
+
 .footer[b-h6jhhsk07a] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+    position: static;
+    width: 100%;
+    line-height: 60px;
 }

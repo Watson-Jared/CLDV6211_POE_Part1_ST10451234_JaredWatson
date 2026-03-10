@@ -1,42 +1,29 @@
 ﻿@model EventEase.Models.Event
-
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Event Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Event</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.EventName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.EventName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.EventStartDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.EventStartDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.EventEndDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.EventEndDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.EventDescription)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.EventDescription)
-        </dd>       
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.EventID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<h1>Event Details</h1>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-card">
+            <dl class="row">
+                <dt class="col-sm-4">@Html.DisplayNameFor(model => model.EventID)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.EventID)</dd>
+                <dt class="col-sm-4">@Html.DisplayNameFor(model => model.EventName)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.EventName)</dd>
+                <dt class="col-sm-4">@Html.DisplayNameFor(model => model.EventStartDate)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.EventStartDate)</dd>
+                <dt class="col-sm-4">@Html.DisplayNameFor(model => model.EventEndDate)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.EventEndDate)</dd>
+                <dt class="col-sm-4">@Html.DisplayNameFor(model => model.EventDescription)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.EventDescription)</dd>
+            </dl>
+        </div>
+        <div class="mt-3 d-flex gap-2">
+            <a asp-action="Edit" asp-route-id="@Model?.EventID" class="btn btn-primary">Edit</a>
+            <a asp-action="Index" class="btn btn-secondary">← Back</a>
+        </div>
+    </div>
 </div>
