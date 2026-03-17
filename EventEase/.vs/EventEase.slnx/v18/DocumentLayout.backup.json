@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\lab_services_student\\OneDrive - ADvTECH Ltd\\Desktop\\Github\\CLDV6211_POE_Part1_ST10451234_JaredWatson\\EventEase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E2C03B8-4821-BD83-A1E3-CFD21491410A}|EventEase.csproj|c:\\users\\lab_services_student\\onedrive - advtech ltd\\desktop\\github\\cldv6211_poe_part1_st10451234_jaredwatson\\eventease\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2E2C03B8-4821-BD83-A1E3-CFD21491410A}|EventEase.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E2C03B8-4821-BD83-A1E3-CFD21491410A}|EventEase.csproj|c:\\users\\lab_services_student\\onedrive - advtech ltd\\desktop\\github\\cldv6211_poe_part1_st10451234_jaredwatson\\eventease\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E2C03B8-4821-BD83-A1E3-CFD21491410A}|EventEase.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2E2C03B8-4821-BD83-A1E3-CFD21491410A}|EventEase.csproj|c:\\users\\lab_services_student\\onedrive - advtech ltd\\desktop\\github\\cldv6211_poe_part1_st10451234_jaredwatson\\eventease\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{2E2C03B8-4821-BD83-A1E3-CFD21491410A}|EventEase.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,45 +26,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\OneDrive - ADvTECH Ltd\\Desktop\\Github\\CLDV6211_POE_Part1_ST10451234_JaredWatson\\EventEase\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BookingController.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\OneDrive - ADvTECH Ltd\\Desktop\\Github\\CLDV6211_POE_Part1_ST10451234_JaredWatson\\EventEase\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "Controllers\\BookingController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T11:39:24.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\OneDrive - ADvTECH Ltd\\Desktop\\Github\\CLDV6211_POE_Part1_ST10451234_JaredWatson\\EventEase\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\OneDrive - ADvTECH Ltd\\Desktop\\Github\\CLDV6211_POE_Part1_ST10451234_JaredWatson\\EventEase\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAAANQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-10T11:34:00.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\OneDrive - ADvTECH Ltd\\Desktop\\Github\\CLDV6211_POE_Part1_ST10451234_JaredWatson\\EventEase\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\lab_services_student\\OneDrive - ADvTECH Ltd\\Desktop\\Github\\CLDV6211_POE_Part1_ST10451234_JaredWatson\\EventEase\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAACwBAAAAAAAAAAAAADUBAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAE4BAAAAAAAAAAAAAFYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-09T10:27:58.429Z"
+              "WhenOpened": "2026-03-09T10:27:58.429Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\OneDrive - ADvTECH Ltd\\Desktop\\Github\\CLDV6211_POE_Part1_ST10451234_JaredWatson\\EventEase\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",

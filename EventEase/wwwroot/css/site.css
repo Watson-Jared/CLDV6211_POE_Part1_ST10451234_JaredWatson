@@ -340,43 +340,6 @@ p > a[href*="Create"] {
         color: var(--white) !important;
     }
 
-/* FORMS */
-.form-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius);
-    padding: 2rem;
-    box-shadow: var(--shadow-md), var(--shadow-glow);
-}
-
-.form-group {
-    margin-bottom: 1.25rem;
-}
-
-.form-control, .form-select, select.form-control {
-    background: rgba(10,15,30,0.6) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: var(--radius-sm) !important;
-    color: var(--text-primary) !important;
-    padding: 0.6rem 0.9rem;
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.9rem;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-    .form-control:focus, .form-select:focus, select.form-control:focus {
-        border-color: var(--emerald) !important;
-        box-shadow: 0 0 0 3px rgba(59,130,246,0.12)!important;
-        outline: none;
-        background: rgba(10,15,30,0.8) !important;
-        color: var(--white) !important;
-    }
-
-    .form-control::placeholder {
-        color: var(--text-muted) !important;
-    }
-
 .control-label, label {
     font-family: 'Outfit', sans-serif;
     font-weight: 500;
@@ -522,8 +485,5 @@ a {
     .navbar-brand {
         font-size: 1.15rem !important;
     }
-
-    .form-card {
-        padding: 1.25rem;
-    }
+ 
 }

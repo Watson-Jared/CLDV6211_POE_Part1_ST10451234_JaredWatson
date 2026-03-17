@@ -1,4 +1,3 @@
-wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -61,6 +60,7 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\site.css
 C:\Users\lab_services_student\OneDrive - ADvTECH Ltd\Desktop\Github\CLDV6211_POE_Part1_ST10451234_JaredWatson\EventEase\wwwroot\favicon.ico
 C:\Users\lab_services_student\OneDrive - ADvTECH Ltd\Desktop\Github\CLDV6211_POE_Part1_ST10451234_JaredWatson\EventEase\wwwroot\js\site.js
 C:\Users\lab_services_student\OneDrive - ADvTECH Ltd\Desktop\Github\CLDV6211_POE_Part1_ST10451234_JaredWatson\EventEase\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
